@@ -1,5 +1,6 @@
 import trees.BinaryTree;
 import trees.Ejercicio1;
+import trees.Ejercicio2;
 import trees.IntTree;
 import trees.Person;
 
@@ -32,7 +33,12 @@ public class App {
         System.out.println("\n--- EJERCICIO 1: IMPRIMIR ARBOL ---");
         Ejercicio1 ejercicio = new Ejercicio1();
         ejercicio.printTree(arbolNumbers.getRoot());
-    }
+        Ejercicio2 e2 = new Ejercicio2();
+        e2.invert(arbolNumbers.getRoot());
+        System.out.println("\nÁrbol invertido:");
+        e2.invert(arbolNumbers.getRoot());
+            }
+    
 
     private static void runPersonTree(){
         BinaryTree<Person> personTree = new BinaryTree<>();
