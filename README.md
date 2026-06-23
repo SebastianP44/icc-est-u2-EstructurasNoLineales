@@ -11,3 +11,7 @@
 ## icc-est-u2-EstructurasNoLineales
 
 ### Descripcion: Realizacion y comprension de creacion de nodos y arboles binarios de busqueda
+
+#### Fecha: 22/06/2026
+
+### Descripcion: Se realizan ejercicios de BTS
