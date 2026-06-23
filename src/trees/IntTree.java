@@ -118,5 +118,7 @@ public class IntTree {
         int alturaIzquierda = getAlturaRecursivo(actual.getLeft());
         int alturaDerecha = getAlturaRecursivo(actual.getRight());
         return Math.max(alturaIzquierda, alturaDerecha) + 1;
+
+        
     }
 }
