@@ -1,6 +1,8 @@
 import trees.BinaryTree;
 import trees.Ejercicio1;
 import trees.Ejercicio2;
+import trees.Ejercicio3;
+import trees.Ejercicio4;
 import trees.IntTree;
 import trees.Person;
 
@@ -33,10 +35,17 @@ public class App {
         System.out.println("\n--- EJERCICIO 1: IMPRIMIR ARBOL ---");
         Ejercicio1 ejercicio = new Ejercicio1();
         ejercicio.printTree(arbolNumbers.getRoot());
-        Ejercicio2 e2 = new Ejercicio2();
-        e2.invert(arbolNumbers.getRoot());
-        System.out.println("\nÁrbol invertido:");
-        e2.invert(arbolNumbers.getRoot());
+        Ejercicio2 ejercicio2 = new Ejercicio2();
+        System.out.println("\n--- EJERCICIO 2: INVERTIR ARBOL ---");
+        ejercicio2.invert(arbolNumbers.getRoot());
+        ejercicio.printTree(arbolNumbers.getRoot());
+        Ejercicio3 ejercicio3 = new Ejercicio3();
+        System.out.println("\n--- EJERCICIO 3: LISTA DE NIVELES---");
+        System.out.println(ejercicio3.listLevels(arbolNumbers.getRoot()));
+        Ejercicio4 ejercicio4 = new Ejercicio4();
+        System.out.println("\n--- EJERCICIO 4: ALTURA DEL ARBOL ---"); 
+
+        System.out.println(ejercicio4.maxDepth(arbolNumbers.getRoot()));
             }
     
 
