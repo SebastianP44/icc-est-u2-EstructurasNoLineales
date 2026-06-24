@@ -1,16 +1,51 @@
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+import collections.sets.Sets;
+import models.Contacto;
 import trees.BinaryTree;
 import trees.Ejercicio1;
 import trees.Ejercicio2;
 import trees.Ejercicio3;
 import trees.Ejercicio4;
 import trees.IntTree;
-import trees.Person;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        runIntTree();
+        // runIntTree();
         System.out.println("\n--- arbol de Personas ---");
-        runPersonTree();
+        // runPersonTree();
+
+        runSets();
+    }
+    private static void runSets() {
+        Sets sets = new Sets();
+    //Primera implemetacion de Set
+        System.out.println("Primera implemetacion de Set");
+        Set<String> hashSet = sets.construirHashSet();
+        System.out.println(hashSet);
+        System.out.println("Tamaño del HashSet: " + hashSet.size());
+        System.out.println("Contiene 'f': " + hashSet.contains("f"));
+        //Segunda implemetacion de Set LinkedHashSet
+        System.out.println("\nSegunda implemetacion de Set");
+        Set<String> linkedHashSet = sets.construirLinekdHashSets();
+        System.out.println(linkedHashSet);
+        System.out.println("Tamaño del LinkedHashSet: " + linkedHashSet.size());
+        System.out.println("Contiene 'A': " + linkedHashSet.contains("A"));
+         //Tercera implemetacion de Set TreeSet
+        System.out.println("\nTercera implemetacion de TreeSet");
+        Set<String> treeSet = sets.construirTreeSets();
+        System.out.println(treeSet);
+        System.out.println("Tamaño del TreeSet: " + treeSet.size());
+        System.out.println("Contiene 'A': " + treeSet.contains("A"));
+
+        System.out.println("TreSet");
+        Set<Contacto> treeSetConComparador = sets.construirTreesetConComparador();
+        System.out.println(treeSetConComparador);
+        System.out.println("Tamaño del TreeSet con comparador: " + treeSetConComparador.size());
+
+        System.out.println("Contiene 'Juan': " + treeSetConComparador.contains(new Contacto("Juan", "Perez", "123456789")));    
+        
     }
 
     private static void runIntTree() {
@@ -47,16 +82,6 @@ public class App {
 
         System.out.println(ejercicio4.maxDepth(arbolNumbers.getRoot()));
             }
-    
-
-    private static void runPersonTree(){
-        BinaryTree<Person> personTree = new BinaryTree<>();
-        personTree.insert(new Person("Alice", "30"));
-        personTree.insert(new Person("Bob", "25"));
-        personTree.insert(new Person("Diego", "35"));
-        personTree.insert(new Person("Rafael", "35"));
-        
-    }
     
     
 }
