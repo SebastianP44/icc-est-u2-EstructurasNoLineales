@@ -86,6 +86,8 @@ public class Sets {
         Contacto contacto4 = new Contacto("Maria", "Rodriguez", "789123456");
         Contacto contacto5 = new Contacto("Juan", "Perez", "123456789"); // Duplicado, no se agregará
         Contacto contacto6 = new Contacto("Juan", "Lopez", "123456789");
+        System.out.println("HashSet de Contactos:");
+        System.out.println(hashSet);
         hashSet.add(contacto1);     
         hashSet.add(contacto2);
         hashSet.add(contacto3);

@@ -1,6 +1,7 @@
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+import collections.maps.Maps;
 import collections.sets.Sets;
 import models.Contacto;
 import trees.BinaryTree;
@@ -17,6 +18,7 @@ public class App {
         // runPersonTree();
 
         runSets();
+        runMaps();
     }
     private static void runSets() {
         Sets sets = new Sets();
@@ -44,8 +46,7 @@ public class App {
         System.out.println(treeSetConComparador);
         System.out.println("Tamaño del TreeSet con comparador: " + treeSetConComparador.size());
 
-        System.out.println("Contiene 'Juan': " + treeSetConComparador.contains(new Contacto("Juan", "Perez", "123456789")));    
-        
+        System.out.println("");
     }
 
     private static void runIntTree() {
@@ -82,6 +83,14 @@ public class App {
 
         System.out.println(ejercicio4.maxDepth(arbolNumbers.getRoot()));
             }
+
+        private static void runMaps(){
+        Maps maps = new Maps();
+        maps.construirHashMap();
+        maps.coLinkedHashMap();
+        maps.construirTreeMap();
+        maps.eliminarDuplicadosandSort(null);
+        }
     
     
 }
