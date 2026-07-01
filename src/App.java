@@ -4,6 +4,7 @@ import java.util.Set;
 import collections.maps.Maps;
 import collections.sets.Sets;
 import models.Contacto;
+import structures.graphs.Graph;
 import trees.BinaryTree;
 import trees.Ejercicio1;
 import trees.Ejercicio2;
@@ -17,24 +18,26 @@ public class App {
         System.out.println("\n--- arbol de Personas ---");
         // runPersonTree();
 
-        runSets();
-        runMaps();
+        // runSets();
+        // runMaps();
+        runGraph();
     }
+
     private static void runSets() {
         Sets sets = new Sets();
-    //Primera implemetacion de Set
+        // Primera implemetacion de Set
         System.out.println("Primera implemetacion de Set");
         Set<String> hashSet = sets.construirHashSet();
         System.out.println(hashSet);
         System.out.println("Tamaño del HashSet: " + hashSet.size());
         System.out.println("Contiene 'f': " + hashSet.contains("f"));
-        //Segunda implemetacion de Set LinkedHashSet
+        // Segunda implemetacion de Set LinkedHashSet
         System.out.println("\nSegunda implemetacion de Set");
         Set<String> linkedHashSet = sets.construirLinekdHashSets();
         System.out.println(linkedHashSet);
         System.out.println("Tamaño del LinkedHashSet: " + linkedHashSet.size());
         System.out.println("Contiene 'A': " + linkedHashSet.contains("A"));
-         //Tercera implemetacion de Set TreeSet
+        // Tercera implemetacion de Set TreeSet
         System.out.println("\nTercera implemetacion de TreeSet");
         Set<String> treeSet = sets.construirTreeSets();
         System.out.println(treeSet);
@@ -55,9 +58,9 @@ public class App {
         arbolNumbers.insert(10);
         arbolNumbers.insert(5);
         arbolNumbers.insert(3);
-        arbolNumbers.insert(8); 
-        arbolNumbers.insert(20); 
-        arbolNumbers.insert(15); 
+        arbolNumbers.insert(8);
+        arbolNumbers.insert(20);
+        arbolNumbers.insert(15);
 
         System.out.println("pre Order");
         arbolNumbers.preOrder();
@@ -79,18 +82,32 @@ public class App {
         System.out.println("\n--- EJERCICIO 3: LISTA DE NIVELES---");
         System.out.println(ejercicio3.listLevels(arbolNumbers.getRoot()));
         Ejercicio4 ejercicio4 = new Ejercicio4();
-        System.out.println("\n--- EJERCICIO 4: ALTURA DEL ARBOL ---"); 
+        System.out.println("\n--- EJERCICIO 4: ALTURA DEL ARBOL ---");
 
         System.out.println(ejercicio4.maxDepth(arbolNumbers.getRoot()));
-            }
+    }
 
-        private static void runMaps(){
+    private static void runMaps() {
         Maps maps = new Maps();
         maps.construirHashMap();
         maps.coLinkedHashMap();
         maps.construirTreeMap();
         maps.eliminarDuplicadosandSort(null);
-        }
-    
-    
+    }
+
+    private static void runGraph() {
+
+        Graph<String> graph = new Graph<>();
+
+        graph.addEdgeUni("A", "B");
+        graph.addEdgeUni("B", "C");
+        graph.addEdgeUni("B", "D");
+        graph.addEdgeUni("C", "A");
+        graph.addEdgeUni("C", "D");
+        graph.addEdgeUni("D", "C");
+        graph.addEdgeUni("D", "J");
+        graph.addEdgeUni("J", "D");
+        graph.printGraph();
+    }
+
 }
