@@ -5,6 +5,9 @@ import collections.maps.Maps;
 import collections.sets.Sets;
 import models.Contacto;
 import structures.graphs.Graph;
+import structures.graphs.PathResult;
+import structures.graphs.implementations.BFSPathFinder;
+import structures.graphs.implementations.DFSPathFinder;
 import trees.BinaryTree;
 import trees.Ejercicio1;
 import trees.Ejercicio2;
@@ -14,13 +17,14 @@ import trees.IntTree;
 
 public class App {
     public static void main(String[] args) throws Exception {
+        // System.out.println("\n--- arbol de Personas ---");
         // runIntTree();
-        System.out.println("\n--- arbol de Personas ---");
         // runPersonTree();
-
         // runSets();
         // runMaps();
-        runGraph();
+
+        // runGraph();
+        runGraph2();
     }
 
     private static void runSets() {
@@ -108,6 +112,59 @@ public class App {
         graph.addEdgeUni("D", "J");
         graph.addEdgeUni("J", "D");
         graph.printGraph();
+    }
+
+    private static void runGraph2() {
+      Graph<String> g = new Graph<>();
+        // g.add("A");
+        g.addEdge("A", "B");
+        g.addEdge("A", "C");
+        g.addEdge("B", "D");
+        g.addEdge("C", "J");
+        g.addEdgeUni("D", "E");
+        g.addEdgeUni("E", "F");
+        g.addEdgeUni("K", "J");
+        
+
+        /* DFSPathFinder<String> dfs = new DFSPathFinder<String>();
+        PathResult<String> result = dfs.find(g, "A", "F");
+        PathResult<String> result2 = dfs.find(g, "A", "J");
+        PathResult<String> result3 = dfs.find(g, "A", "K");
+
+        System.out.println();
+        System.out.println(" A a F: " );
+        System.out.println("visitados: " + result.getVisitados());
+        System.out.println("path:" + result.getPath());
+        System.out.println();
+        System.out.println(" A to J: " );
+        System.out.println("visitados: " + result2.getVisitados());
+        System.out.println("path: " + result2.getPath());   
+        System.out.println();
+        System.out.println("A to K: " );
+        System.out.println("visitados: " + result3.getVisitados());
+        System.out.println("path:" + result3);
+        /* */
+
+        BFSPathFinder<String> bfs = new BFSPathFinder<String>();
+        PathResult<String> result4 = bfs.findPath(g, "A", "F");
+        PathResult<String> result5 = bfs.findPath(g, "A", "J");
+        PathResult<String> result6 = bfs.findPath(g, "A", "K");
+
+        System.out.println();
+        System.out.println(" A a F: " );
+        System.out.println("visitados: " + result4.getVisitados());
+        System.out.println("path:" + result4.getPath());
+        System.out.println();
+        System.out.println(" A to J: " );
+        System.out.println("visitados: " + result5.getVisitados());
+        System.out.println("path: " + result5.getPath());   
+        System.out.println();
+        System.out.println("A to K: " );
+        System.out.println("visitados: " + result6.getVisitados());
+        System.out.println("path:" + result6);
+
+
+
     }
 
 }

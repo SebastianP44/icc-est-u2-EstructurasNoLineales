@@ -1,13 +1,22 @@
 package models;
 
 public class Contacto {
-
+    
     private String nombre;
     private String apellido;
     private String telefono;
-
     
-
+    
+    public Contacto(String nombre, String apellido, String telefono) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.telefono = telefono;
+    }
+    
+    public String getNombre() {
+        return nombre;
+    }
+    
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -45,15 +54,6 @@ public class Contacto {
         return true;
     }
 
-    public Contacto(String nombre, String apellido, String telefono) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.telefono = telefono;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
