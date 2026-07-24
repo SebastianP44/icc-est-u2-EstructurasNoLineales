@@ -22,11 +22,6 @@ Este método recibe un arreglo de numeros y construye un arbol binario de busque
 - Si es mayor, va a la derecha.
 - Esto se repite hasta ubicar cada valor en su lugar.
 
-
-## Captura de consola
-
-![alt text](image-8.png)
-
 ### Ejemplo de entrada:
 ```java
 int[] numeros = {5, 3, 7, 2, 4, 6, 8};
