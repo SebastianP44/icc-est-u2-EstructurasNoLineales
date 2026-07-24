@@ -46,7 +46,7 @@ Básicamente intercambia los hijos izquierdo y derecho de cada nodo.
 
 Idea:
 
-Si un nodo tenía un hijo izquierdo, ahora lo tiene a la derecha y viceversa.
+Si un nodo tenía un hijo izquierdo, ahora lo tiene a la derecha
 
 Se hace con recursividad hasta recorrer todo el arbol.
 
@@ -62,23 +62,6 @@ Cada nivel se guarda en una lista
 Resultado:
 
 Se puede ver el arbol organizado por filas, como niveles.
-
-Ejemplo:
-
-5
-3 -> 7
-2 -> 4 -> 6 -> 8
-Ejercicio 04: Profundidad maxima
-Método: maxDepth(Node root)
-
-Este metodo calcula qué tan “alto” es el arbol.
-
-Cómo funciona:
-Recorre el arbol por recursión
-Compara el lado izquierdo y derecho
-Se queda con el mayor
-
-Al final devuelve la cantidad de niveles del arbol.
 
 Código principal (App.java)
 
@@ -107,20 +90,6 @@ Ejercicio 04
 
 Se muestra la profundidad total del arbol.
 
+Repositorio 
 
-Repositorio
-
-Link del repositorio:
-
-https://github.com/Sebastian3332/icc-est-u2-EstructurasNoLineales.git
-
-
-Conclusion
-
-Con esta practica se entiende mejor cómo funcionan los arboles binarios.
-
-No es solo teoria, sino que se ve como los datos se organizan de forma real en forma de estructura.
-
-La parte mas importante fue entender la recursividad, porque casi todos los ejercicios dependen de eso.
-
-Tambien se vio que los arboles ayudan a organizar datos de manera más eficiente que una lista normal.
+https://github.com/SebastianP44/icc-est-u2-EstructurasNoLineales.git

@@ -11,7 +11,7 @@ import structures.graphs.PathFinder;
 import structures.graphs.PathResult;
 import structures.node.Node;
 
-//DFC recorre el grafo en profundidad, explorando tanto como sea posible a lo largo de cada rama antes de retroceder.
+//DFS recorre el grafo en profundidad, explorando tanto como sea posible a lo largo de cada rama antes de retroceder.
 public class DFSPathFinder<T> implements PathFinder<T> {
     @Override
     public PathResult<T> find(Graph<T> graph, T start, T end) {
